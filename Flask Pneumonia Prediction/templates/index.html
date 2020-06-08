@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+
+
+
+<h2><b>Pneumonia Prediction</b></h2>
+<hr>
+
+<div class="row">
+    <div class="col-sm">
+        <div class="description-section">
+            <p>
+                Pneumonia is a form of acute respiratory infection that affects the lungs.The lungs are made up of small sacs called alveoli, which fill with air when a healthy person breathes. When an individual has pneumonia, the alveoli are filled with pus and fluid, which makes breathing painful and limits oxygen intake.
+            </p>
+            <p>
+                Several tests like chest X-Ray, blood tests such as complete blood count(CBC) is performed on the patient. With the increase in computational power and development of technologies like Convolutional Neural Networks, it is possible to help doctors and patients speed up the treatment process using Artificial Intelligence. 
+            </p>
+        </div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <p>
+                Upload a chest Xray image and press the predict button... 
+            </p>
+            <label for="imageUpload" class="upload-label">
+                Choose... 
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            </div>
+        </div>
+
+        <div class="loader" style="display:none;"></div>
+
+        <h3 id="result">
+            <span> </span>
+        </h3>
+    </div>
+    <div class="col-sm">
+        <h3><b>Facts about Pneumonia and AI Predictor:</b></h3>
+        <p style="text-align: center;">
+            <li>According to W.H.O., Pneumonia accounts for 15% of all deaths of children under 5 years old, killing 808 694 children in 2017.</li>
+            <li>The AI predictor can predict pneumonia with 88% accuracy</li>
+            <li>The AI predictor is made by using Convolutional Neural Network.</li>
+            <li>The AI predictor is still under testing phase. Do not consider the results to be accurate.</li>
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}
